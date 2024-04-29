@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: #fff;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+/*-----header----------*/
+
+.header{
+    width: 100%;
+    height: 140vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 10px 3%;
+}
+
+/*------nav------*/
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 155px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex; 
+    gap: 20px; 
+  }
+
+nav .language-btn{
+    display: inline-flex;
+    border: 1px solid #fff;
+    outline: 0;
+    padding: 7px 20px;
+    background: black;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgba(48, 48, 48, 0.5);
+}
+
+.translation{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.dropdown{
+     width: 9px;
+     height: 5px;
+     margin-left: 10px;
+     margin-top: 6px;
+}
+
+nav .signin{
+    border: 1px solid red;
+    outline: 0;
+    padding: 7px 20px;
+    background-color: red;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-top: 100px;
+   text-align: center;
+}
+
+/*-----content----------*/
+
+.header-content h1{
+    font-size: 3rem;
+    line-height: 70px;
+    font-weight: 600;
+    min-width: 960px;
+}
+
+.header-content h3{
+    font-size: 1.5rem;
+    line-height: 70px;
+    font-weight: 400;
+    min-width: 960px;
+}
+
+.header-content p{
+    font-size: 22px;
+    font-weight: 100;
+    margin-top: 7px;
+}
+
+.email{
+    background:black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+    overflow: hidden;
+    background: transparent;
+    width: 60%;
+    margin-left: 20%;
+    padding-bottom: 20px;
+}
+
+.email input{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    flex: 1;
+    border: 0;
+    outline: 1px solid whitesmoke;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 16px 10px;
+}
+
+.email button{
+    background: #db0001;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+hr{
+    padding: 4.5px;
+    border: 0;
+    outline: 0;
+    background: rgb(49, 49, 50);
+}
+
+/*-----features----------*/
+
+.features{
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 90px 4%;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2{
+     font-size: 48px;
+     font-weight: 800;
+     margin-bottom: 20px;
+}
+
+.features p{
+    font-size:25px ;
+    line-height: 32px;
+}
+
+.faq{
+    padding: 10px 3%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2{
+    font-size: 45px;
+    font-weight: 800;
+    margin-top:50px;
+    margin-bottom: 20px;
+}
+
+.accordion{
+    padding: 60px auto;
+    width: 150%;
+    max-width: 1010px;
+}
+
+.accordion li{
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.accordion li label{
+    display: flex;
+    padding: 30px;
+    font-size: 23px;
+    align-items: center;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 47px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    max-height: 0;
+    font-size: 24px;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion .content p{
+    padding-left: 9.3px;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.last-mail{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.faq .mail{
+    background-color: rgba(48, 48, 48, 0.3);
+    color: #fff;
+}
+
+/*-----------footer------------*/
+
+.footer{
+    box-sizing: border-box;
+    padding: 75px 2.7%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer p{
+    margin-bottom: 17px;
+    font-size: 1rem;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+}
+
+.footer .col a{
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.language-btn2{
+    display: inline-flex;
+    margin-top: 15px;
+    border: 1px solid #353935;
+    outline: 0;
+    padding: 6px 14px;
+    background: rgba(48, 48, 48, 0.3);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copyright{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 15px;
+}
